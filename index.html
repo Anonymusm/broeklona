@@ -34,8 +34,37 @@
       <li class="navigation-list__item">Contacts</li>
     </ul>
   </nav>
-    <button class="header-btn">Contact us</button>
+    <button class="header-btn" data-modal-open>Contact us</button>
+            <div class="backdrop is--hidden no--scroll" data-backdrop>
+              <div class="modal">
+                <button type="button" class="modal--close" data-modal-close>
+                  <svg class="modal--close__icon" width="11" height="11">
+                    <use href="./icons/symbol-defs.svg#icon-modal-close"></use>
+                  </svg>
+                </button>
+                <h2 class="header-modal__title">
+                Leave your contacts and we will contact you
+                </h2>
+                <form class="form">
+                  <ul class="form-list">
+                    <li class="form-list__item">
+                      <input type="text" id="name" minlength="1" maxlength="22" required class="modal__input" placeholder="Yuliia"/>
+                      <label for="name">Name</label>
+                    </li>
+                    <li class="form-list__item">
+                      <input type="tel" id="phone-number" minlength="8" maxlength="15" required class="modal__input" placeholder="+380"/>
+                      <label for="phone__number">Telephone</label>
+                    </li>
+                    <li class="form-list__item">
+                      <input type="email" id="email" minlength="10" maxlength="50" required class="modal__input" placeholder="Contact@gmail.com"/>
+                      <label for="email">Email</label>
+                    </li>
+                  </ul>
+                  <button type="submit" class="modal__btn">Contact us</button>
+                </form>
+              </div>
       </div>
     </header>
+        <script src="./js/modal.js"></script>
   </body>
 </html>
